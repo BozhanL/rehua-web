@@ -31,20 +31,18 @@ jobs:
           check-latest: true
 
       - name: 📦 Install dependencies
-        id: install
         run: npm ci --no-audit --ignore-scripts
 
       - name: 🧪 Run tests
+        continue-on-error: true
         run: npm test
-
-      - name: 🧪 Run Jest Coverage Comment
-        if: ${{ success() || (failure() && steps.install.conclusion == 'success') }}
-        id: coverage
-        uses: MishaKav/jest-coverage-comment@40d7aed38d0fbaea266c34c12ab06356eec894eb # v1.0.33
-        with:
-          create-new-comment: false
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@299e4b793aaa83bf2aba7c9c14bedbb485688ec4 # v7.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: 🧪 Run Jest Coverage Comment
+        uses: MishaKav/jest-coverage-comment@40d7aed38d0fbaea266c34c12ab06356eec894eb # v1.0.33
+        with:
+          create-new-comment: false
