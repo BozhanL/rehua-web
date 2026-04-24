@@ -1,0 +1,45 @@
+{
+  "name": "rehua-web",
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/BozhanL/rehua-web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BozhanL/rehua-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BozhanL/rehua-web/issues"
+  },
+  "private": true,
+  "engines": {
+    "node": "^24",
+    "npm": "^11.11"
+  },
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "serve out",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "type": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.2",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.1",
+    "prettier": "3.8.1",
+    "serve": "14.2.6",
+    "tailwindcss": "4.2.2",
+    "typescript": "5.9.3"
+  }
+}

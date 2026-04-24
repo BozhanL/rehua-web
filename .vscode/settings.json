@@ -1,0 +1,12 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "files.associations": {
+    "renovate.json": "jsonc"
+  },
+  "eslint.format.enable": true,
+  "editor.formatOnSave": false
+}
