@@ -15,7 +15,8 @@
         "dbaeumer.vscode-eslint",
         "HTMLHint.vscode-htmlhint",
         "ecmel.vscode-html-css",
-        "ms-azuretools.vscode-containers"
+        "ms-azuretools.vscode-containers",
+        "SonarSource.sonarlint-vscode"
       ]
     }
   },
