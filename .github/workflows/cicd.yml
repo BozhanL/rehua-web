@@ -89,7 +89,7 @@ jobs:
         run: cp .gitignore ${{ steps.download.outputs.download-path }}/.gitignore
 
       - name: 📦 Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: ${{ steps.download.outputs.download-path }}
           branch: gh-pages
