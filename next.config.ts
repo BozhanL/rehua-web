@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { env } from "process";
+import { env } from "node:process";
 
 const nextConfig: NextConfig = {
   basePath: env["BASE_URL"] ?? "",
