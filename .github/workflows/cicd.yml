@@ -36,8 +36,8 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
-      - name: 🧪 Run ${{ matrix.build.command }}
-        run: npm run ${{ matrix.build.command }}
+      - name: 🧪 Run ${{ matrix.command }}
+        run: npm run ${{ matrix.command }}
 
   build:
     runs-on: ubuntu-latest
