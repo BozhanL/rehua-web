@@ -1,5 +1,9 @@
 # Web Frontend for the Rehua project
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BozhanL_rehua-web&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BozhanL_rehua-web) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=BozhanL_rehua-web&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=BozhanL_rehua-web) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=BozhanL_rehua-web&metric=coverage)](https://sonarcloud.io/summary/new_code?id=BozhanL_rehua-web) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=BozhanL_rehua-web&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=BozhanL_rehua-web) [![Next.js CI/CD](https://github.com/BozhanL/rehua-web/actions/workflows/cicd.yml/badge.svg)](https://github.com/BozhanL/rehua-web/actions/workflows/cicd.yml) [![CodeQL Advanced](https://github.com/BozhanL/rehua-web/actions/workflows/codeql.yml/badge.svg)](https://github.com/BozhanL/rehua-web/actions/workflows/codeql.yml)
+
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-highlight.svg)](https://sonarcloud.io/summary/new_code?id=BozhanL_rehua-web)
+
 ## License
 
 ```text

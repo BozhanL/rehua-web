@@ -17,6 +17,11 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
+
+    strategy:
+      matrix:
+        command: [type, lint, format]
+
     steps:
       - name: 🏗 Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -29,10 +34,10 @@ jobs:
           check-latest: true
 
       - name: 📦 Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --ignore-scripts
 
-      - name: 🧪 Run lint
-        run: npm run lint
+      - name: 🧪 Run ${{ matrix.command }}
+        run: npm run ${{ matrix.command }}
 
   build:
     runs-on: ubuntu-latest
@@ -53,7 +58,7 @@ jobs:
           check-latest: true
 
       - name: 📦 Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --ignore-scripts
 
       - name: 🏗️ Build
         run: npm run build
