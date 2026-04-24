@@ -1,10 +1,48 @@
+import js from "@eslint/js";
 import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
 import { defineConfig, globalIgnores } from "eslint/config";
+import tseslint from "typescript-eslint";
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+  nextVitals,
+  js.configs.recommended,
+
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    rules: {
+      "@typescript-eslint/explicit-function-return-type": "error",
+    },
+  },
+
+  {
+    // This check will cause linter halt.
+    // Maybe related to https://github.com/typescript-eslint/typescript-eslint/pull/11605
+    rules: {
+      "@typescript-eslint/no-deprecated": "off",
+    },
+  },
+  {
+    // https://typescript-eslint.io/troubleshooting/typed-linting/performance#eslint-plugin-import
+    rules: {
+      "import/named": "off",
+      "import/namespace": "off",
+      "import/default": "off",
+      "import/no-named-as-default-member": "off",
+    },
+  },
+  {
+    rules: {
+      curly: ["error", "all"],
+    },
+  },
+
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
