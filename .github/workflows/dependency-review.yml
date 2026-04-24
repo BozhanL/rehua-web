@@ -11,15 +11,7 @@ permissions: {}
 
 jobs:
   submit-dependency:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: 🏗 Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-
-      - name: Component detection
-        uses: ./.github/workflows/submit-dependency.yml
+    uses: ./.github/workflows/submit-dependency.yml
 
   dependency-review:
     runs-on: ubuntu-latest
