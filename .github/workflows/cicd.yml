@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
-      contents: read
+      contents: write # To create commit comment
       pull-requests: write
     steps:
       - name: 🏗 Checkout repository
