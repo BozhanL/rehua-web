@@ -1,5 +1,8 @@
 import type { JSX } from "react";
+import { functional } from "typia";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return <h1>Hello world</h1>;
 }
+
+export default functional.assertFunction(Home);
