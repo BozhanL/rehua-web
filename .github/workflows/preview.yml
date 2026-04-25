@@ -62,15 +62,3 @@ jobs:
           umbrella-dir: pr-preview
           pages-base-url: ${{ steps.domain.outputs.domain }}
           wait-for-pages-deployment: false
-
-  collect:
-    if: ${{ always() }}
-    runs-on: ubuntu-latest
-    name: Final Results
-    timeout-minutes: 2
-    needs:
-      - preview
-    steps:
-      - name: ✔️ Fail if any dependency failed
-        if: ${{ contains(needs.*.result, 'failure') }}
-        run: exit 1
