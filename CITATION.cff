@@ -2,13 +2,13 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Rehua documentation
+title: Rehua frontend
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
   - name: Rehua Contributors
-repository-code: "https://github.com/BozhanL/rehua-doc"
+repository-code: "https://github.com/BozhanL/rehua-web"
 abstract: Web Frontend for the Rehua project
 license: GPL-3.0-or-later
