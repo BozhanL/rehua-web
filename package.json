@@ -26,6 +26,7 @@
     "lint:fix": "eslint --fix .",
     "type": "tsc --noEmit",
     "test": "jest",
+    "test:cov": "jest --coverage",
     "prepare": "ts-patch install"
   },
   "dependencies": {
