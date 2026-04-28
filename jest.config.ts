@@ -186,7 +186,7 @@ const config: Config = {
     "^.+\\.(js|jsx|ts|tsx|mjs)$": [
       "ts-jest",
       {
-        tsconfig: "./tsconfig.jest.json",
+        tsconfig: "./tsconfig.test.json",
       },
     ],
   },
