@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import nextVitals from "eslint-config-next/core-web-vitals";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
@@ -52,6 +53,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "coverage/**",
   ]),
+
+  eslintConfigPrettier,
 ]);
 
 export default eslintConfig;
