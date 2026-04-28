@@ -35,7 +35,7 @@
     "typia": "12.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.4",
+    "@eslint/js": "10.0.1",
     "@tailwindcss/postcss": "4.2.2",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.9.1",
@@ -45,7 +45,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@typia/unplugin": "12.0.1",
-    "eslint": "9.39.4",
+    "eslint": "10.1.0",
     "eslint-config-next": "16.2.1",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
