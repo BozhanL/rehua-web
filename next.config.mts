@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
 };
 
 const unpluginTypiaOptions: Options = {
-  log: true,
+  log: false,
 };
 
 export default unTypiaNext(nextConfig, unpluginTypiaOptions);
