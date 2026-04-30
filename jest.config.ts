@@ -2,13 +2,12 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-
-import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
-  dir: "./",
+  dir: './',
 });
 
 const config: Config = {
@@ -28,10 +27,10 @@ const config: Config = {
   // collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ["./app/**/*.{ts,tsx,js,jsx}"],
+  collectCoverageFrom: ['./app/**/*.{ts,tsx,js,jsx}'],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -39,10 +38,10 @@ const config: Config = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: ["json", "json-summary", "text", "lcov", "clover"],
+  coverageReporters: ['json', 'json-summary', 'text', 'lcov', 'clover'],
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
@@ -98,8 +97,8 @@ const config: Config = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/$1",
-    "^(\\.{1,2}/.*)\\.js$": "$1",
+    '^@/(.*)$': '<rootDir>/$1',
+    '^(\\.{1,2}/.*)\\.js$': '$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -147,7 +146,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["./jest.setup.ts"],
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -156,7 +155,7 @@ const config: Config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -186,10 +185,10 @@ const config: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.(js|jsx|ts|tsx|mjs)$": [
-      "ts-jest",
+    '^.+\\.(js|jsx|ts|tsx|mjs)$': [
+      'ts-jest',
       {
-        tsconfig: "./tsconfig.test.json",
+        tsconfig: './tsconfig.test.json',
       },
     ],
   },

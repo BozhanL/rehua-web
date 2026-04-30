@@ -9,6 +9,6 @@ message: >-
 type: software
 authors:
   - name: Rehua Contributors
-repository-code: "https://github.com/BozhanL/rehua-web"
+repository-code: 'https://github.com/BozhanL/rehua-web'
 abstract: Web Frontend for the Rehua project
 license: GPL-3.0-or-later
