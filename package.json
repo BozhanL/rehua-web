@@ -32,7 +32,7 @@
     "fix-all": "concurrently -m 1 --kill-others-on-fail npm:lint:fix npm:format:fix"
   },
   "dependencies": {
-    "next": "16.2.3",
+    "next": "16.2.4",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "typia": "12.0.1"
@@ -50,7 +50,7 @@
     "@typia/unplugin": "12.0.1",
     "concurrently": "9.2.1",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.2.1",
+    "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "10.1.8",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
