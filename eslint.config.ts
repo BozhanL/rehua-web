@@ -41,6 +41,9 @@ const eslintConfig = defineConfig([
   {
     rules: {
       curly: ['error', 'all'],
+      eqeqeq: ['error', 'always'],
+      'prefer-arrow-callback': 'error',
+      'func-style': ['error', 'declaration'],
     },
   },
 
