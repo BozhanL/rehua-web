@@ -27,7 +27,7 @@
     "type": "tsc --noEmit",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "prepare": "ts-patch install",
+    "prepare": "ts-patch install && husky",
     "check-all": "concurrently -m 1 --kill-others-on-fail npm:type npm:lint npm:test:cov npm:format",
     "fix-all": "concurrently -m 1 --kill-others-on-fail npm:lint:fix npm:format:fix"
   },
@@ -38,6 +38,9 @@
     "typia": "12.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "20.5.0",
+    "@commitlint/config-conventional": "20.5.0",
+    "@commitlint/cz-commitlint": "20.5.1",
     "@eslint/js": "9.39.4",
     "@tailwindcss/postcss": "4.2.4",
     "@testing-library/dom": "10.4.1",
@@ -49,10 +52,12 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@typia/unplugin": "12.0.2",
+    "commitizen": "4.3.1",
     "concurrently": "9.2.1",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "10.1.8",
+    "husky": "9.1.7",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
     "prettier": "3.8.3",
@@ -63,5 +68,10 @@
     "ts-patch": "3.3.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.59.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }

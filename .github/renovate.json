@@ -5,6 +5,7 @@
     "helpers:disableTypesNodeMajor",
     "helpers:pinGitHubActionDigestsToSemver",
     // ":assignAndReview(BozhanL)", // Add this back when development starts
+    ":semanticCommits",
     ":label(dependencies)",
     "local>BozhanL/rehua-web//.github/renovate/minimumReleaseAge"
   ],
