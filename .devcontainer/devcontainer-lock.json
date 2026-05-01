@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/devcontainers-extra/features/cz-cli:1": {
+      "version": "1.0.2",
+      "resolved": "ghcr.io/devcontainers-extra/features/cz-cli@sha256:84d32f60ec45bdca23a0ec69d753883fb01fe594f204c5903b2871b2ac4075ed",
+      "integrity": "sha256:84d32f60ec45bdca23a0ec69d753883fb01fe594f204c5903b2871b2ac4075ed"
+    }
+  }
+}
