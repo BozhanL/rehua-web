@@ -22,13 +22,15 @@
     "start": "serve out",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint --max-warnings 0 --fix .",
     "type": "tsc --noEmit",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "prepare": "ts-patch install",
-    "check-all": "concurrently -m 1 --kill-others-on-fail npm:type npm:lint npm:test:cov npm:format",
+    "prepare": "ts-patch install && husky",
+    "commitlint": "commitlint",
+    "check-all:par": "concurrently --kill-others-on-fail npm:type npm:lint npm:test:cov npm:format",
+    "check-all": "npm run check-all:par -- -m 1",
     "fix-all": "concurrently -m 1 --kill-others-on-fail npm:lint:fix npm:format:fix"
   },
   "dependencies": {
@@ -38,6 +40,8 @@
     "typia": "12.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "20.5.0",
+    "@commitlint/config-conventional": "20.5.0",
     "@eslint/js": "9.39.4",
     "@tailwindcss/postcss": "4.2.4",
     "@testing-library/dom": "10.4.1",
@@ -53,6 +57,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "10.1.8",
+    "husky": "9.1.7",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
     "prettier": "3.8.3",
@@ -63,5 +68,10 @@
     "ts-patch": "3.3.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.59.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }

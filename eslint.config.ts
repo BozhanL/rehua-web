@@ -47,6 +47,11 @@ const eslintConfig = defineConfig([
     },
   },
 
+  {
+    files: ['commitlint.config.js'],
+    ...tseslint.configs.disableTypeChecked,
+  },
+
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
